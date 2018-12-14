@@ -14,6 +14,10 @@
 		23E4F83421B9809D00EBDD77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23E4F83221B9809D00EBDD77 /* LaunchScreen.storyboard */; };
 		23E4F83F21B9809D00EBDD77 /* CrashXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E4F83E21B9809D00EBDD77 /* CrashXTests.swift */; };
 		23E4F84A21B9809D00EBDD77 /* CrashXUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E4F84921B9809D00EBDD77 /* CrashXUITests.swift */; };
+		23E4F85D21B980CC00EBDD77 /* SignalCrash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E4F85821B980CB00EBDD77 /* SignalCrash.swift */; };
+		23E4F85E21B980CC00EBDD77 /* SlideAdressTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E4F85921B980CB00EBDD77 /* SlideAdressTool.m */; };
+		23E4F85F21B980CC00EBDD77 /* CrashManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E4F85A21B980CB00EBDD77 /* CrashManager.swift */; };
+		23E4F86021B980CC00EBDD77 /* NSExceptionCrash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E4F85B21B980CB00EBDD77 /* NSExceptionCrash.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,12 @@
 		23E4F84521B9809D00EBDD77 /* CrashXUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrashXUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23E4F84921B9809D00EBDD77 /* CrashXUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrashXUITests.swift; sourceTree = "<group>"; };
 		23E4F84B21B9809D00EBDD77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23E4F85721B980CA00EBDD77 /* CrashX-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CrashX-Bridging-Header.h"; sourceTree = "<group>"; };
+		23E4F85821B980CB00EBDD77 /* SignalCrash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignalCrash.swift; sourceTree = "<group>"; };
+		23E4F85921B980CB00EBDD77 /* SlideAdressTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideAdressTool.m; sourceTree = "<group>"; };
+		23E4F85A21B980CB00EBDD77 /* CrashManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrashManager.swift; sourceTree = "<group>"; };
+		23E4F85B21B980CB00EBDD77 /* NSExceptionCrash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSExceptionCrash.swift; sourceTree = "<group>"; };
+		23E4F85C21B980CC00EBDD77 /* SlideAdressTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideAdressTool.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +109,12 @@
 			children = (
 				23E4F82921B9809B00EBDD77 /* AppDelegate.swift */,
 				23E4F82B21B9809B00EBDD77 /* ViewController.swift */,
+				23F5CABF21C38DE50082B48E /* Crash */,
 				23E4F82D21B9809B00EBDD77 /* Main.storyboard */,
 				23E4F83021B9809D00EBDD77 /* Assets.xcassets */,
 				23E4F83221B9809D00EBDD77 /* LaunchScreen.storyboard */,
 				23E4F83521B9809D00EBDD77 /* Info.plist */,
+				23E4F85721B980CA00EBDD77 /* CrashX-Bridging-Header.h */,
 			);
 			path = CrashX;
 			sourceTree = "<group>";
@@ -123,6 +135,18 @@
 				23E4F84B21B9809D00EBDD77 /* Info.plist */,
 			);
 			path = CrashXUITests;
+			sourceTree = "<group>";
+		};
+		23F5CABF21C38DE50082B48E /* Crash */ = {
+			isa = PBXGroup;
+			children = (
+				23E4F85A21B980CB00EBDD77 /* CrashManager.swift */,
+				23E4F85B21B980CB00EBDD77 /* NSExceptionCrash.swift */,
+				23E4F85821B980CB00EBDD77 /* SignalCrash.swift */,
+				23E4F85C21B980CC00EBDD77 /* SlideAdressTool.h */,
+				23E4F85921B980CB00EBDD77 /* SlideAdressTool.m */,
+			);
+			path = Crash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +217,7 @@
 				TargetAttributes = {
 					23E4F82521B9809B00EBDD77 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 					23E4F83921B9809D00EBDD77 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -257,7 +282,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				23E4F82C21B9809B00EBDD77 /* ViewController.swift in Sources */,
+				23E4F85F21B980CC00EBDD77 /* CrashManager.swift in Sources */,
+				23E4F85E21B980CC00EBDD77 /* SlideAdressTool.m in Sources */,
 				23E4F82A21B9809B00EBDD77 /* AppDelegate.swift in Sources */,
+				23E4F86021B980CC00EBDD77 /* NSExceptionCrash.swift in Sources */,
+				23E4F85D21B980CC00EBDD77 /* SignalCrash.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,7 +459,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 43FN232FGD;
 				INFOPLIST_FILE = CrashX/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -438,6 +469,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = zouwei.com.CrashX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CrashX/CrashX-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -447,7 +480,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 43FN232FGD;
 				INFOPLIST_FILE = CrashX/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -455,6 +490,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = zouwei.com.CrashX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CrashX/CrashX-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
